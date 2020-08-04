@@ -1,5 +1,5 @@
 
-package acme.features.authenticated.application;
+package acme.features.authenticated.investor.application;
 
 import javax.annotation.PostConstruct;
 
@@ -8,21 +8,21 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import acme.entities.applications.Application;
+import acme.entities.roles.Investor;
 import acme.framework.components.BasicCommand;
 import acme.framework.controllers.AbstractController;
-import acme.framework.entities.Authenticated;
 
 @Controller
-@RequestMapping("/authenticated/application/")
-public class AuthenticatedApplicationController extends AbstractController<Authenticated, Application> {
+@RequestMapping("/investor/application/")
+public class InvestorApplicationController extends AbstractController<Investor, Application> {
 
 	// Internal state ---------------------------------------------------------
 
 	@Autowired
-	private AuthenticatedApplicationShowService	showService;
+	private InvestorApplicationShowService	showService;
 
 	@Autowired
-	private AuthenticatedApplicationListService	listService;
+	private InvestorApplicationListService	listService;
 
 
 	// Constructors -----------------------------------------------------------

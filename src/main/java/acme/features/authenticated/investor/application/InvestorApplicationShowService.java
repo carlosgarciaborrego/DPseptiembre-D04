@@ -1,18 +1,20 @@
 
-package acme.features.authenticated.application;
+package acme.features.authenticated.investor.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
+import acme.entities.roles.Investor;
 import acme.framework.components.Model;
 import acme.framework.components.Request;
-import acme.framework.entities.Authenticated;
 import acme.framework.services.AbstractShowService;
 
-public class AuthenticatedApplicationShowService implements AbstractShowService<Authenticated, Application> {
+@Service
+public class InvestorApplicationShowService implements AbstractShowService<Investor, Application> {
 
 	@Autowired
-	AuthenticatedApplicationRepository repository;
+	InvestorApplicationRepository repository;
 
 
 	@Override

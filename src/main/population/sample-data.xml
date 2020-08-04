@@ -208,76 +208,9 @@
 	
 	
 	
-	<bean name="application1" class="acme.entities.applications.Application">
-		<property name="ticker" value="INV-11-221212" />
-		<property name="creation" value="2020/07/25 10:30" />
-		<property name="statement" value="Declaración escrita" />
-		<property name="offer" value="€1000" />
-		<property name="investmentRound" ref="investorRecord1" />
-		<property name="investor" ref="investor1" />
-	</bean>
 	
-	<bean name="application2" class="acme.entities.applications.Application">
-		<property name="ticker" value="INV-11-221216" />
-		<property name="creation" value="2020/07/21 10:30" />
-		<property name="statement" value="Declaración escrita" />
-		<property name="offer" value="€1200" />
-		<property name="investmentRound" ref="investorRecord2" />
-		<property name="investor" ref="investor1" />
-	</bean>
 	
-	<bean name="application3" class="acme.entities.applications.Application">
-		<property name="ticker" value="INV-11-721212" />
-		<property name="creation" value="2020/07/25 10:30" />
-		<property name="statement" value="Declaración escrita" />
-		<property name="offer" value="€1300" />
-		<property name="investmentRound" ref="investorRecord1" />
-		<property name="investor" ref="investor2" />
-	</bean>
-	
-	<bean name="application4" class="acme.entities.applications.Application">
-		<property name="ticker" value="INV-11-201212" />
-		<property name="creation" value="2020/07/24 10:30" />
-		<property name="statement" value="Declaración escrita" />
-		<property name="offer" value="€1050" />
-		<property name="investmentRound" ref="investorRecord2" />
-		<property name="investor" ref="investor2" />
-	</bean>
-	
-	<bean name="application5" class="acme.entities.applications.Application">
-		<property name="ticker" value="INV-11-226262" />
-		<property name="creation" value="2020/07/20 10:30" />
-		<property name="statement" value="Declaración escrita" />
-		<property name="offer" value="€1100" />
-		<property name="investmentRound" ref="investorRecord1" />
-		<property name="investor" ref="investor1" />
-	</bean>
-	
-	<bean name="activity1" class="acme.entities.activities.Activity">
-		<property name="ticker" value="act-12-001122" />
-		<property name="startDate" value="2020/09/01 08:30" />
-		<property name="endDate" value="2020/10/01 08:30" />
-		<property name="budget" value="€500" />
-		<property name="investmentRound" ref="investorRecord1" />
-	</bean>
-	
-	<bean name="activity2" class="acme.entities.activities.Activity">
-		<property name="ticker" value="act-12-331122" />
-		<property name="startDate" value="2020/09/05 08:30" />
-		<property name="endDate" value="2020/11/04 08:30" />
-		<property name="budget" value="€500" />
-		<property name="investmentRound" ref="investorRecord1" />
-	</bean>
-	
-	<bean name="activity3" class="acme.entities.activities.Activity">
-		<property name="ticker" value="act-12-334422" />
-		<property name="startDate" value="2020/09/05 08:30" />
-		<property name="endDate" value="2020/11/04 08:30" />
-		<property name="budget" value="€200" />
-		<property name="investmentRound" ref="investorRecord2" />
-	</bean>
-	
-	<bean name="investorRecord1" class="acme.entities.investmentRounds.InvestmentRound">
+	<bean name="investmentRound1" class="acme.entities.investmentRounds.InvestmentRound">
 		<property name="ticker" value="ASR-10-001100" />
 		<property name="creation" value="2020/07/25 10:30" />
 		<property name="kindRound" value="ANGEL" />
@@ -286,10 +219,10 @@
 		<property name="amount" value="€300" />
 		<property name="link" value="http://www.enlace.com" />
 		<property name="active" value="true" />
-		<property name="entrepreneur" value="entrepreneur1" />
+		<property name="entrepreneur" ref="entrepreneur1" />
 	</bean>
 	
-		<bean name="investorRecord2" class="acme.entities.investmentRounds.InvestmentRound">
+		<bean name="investmentRound2" class="acme.entities.investmentRounds.InvestmentRound">
 		<property name="ticker" value="MMM-10-001100" />
 		<property name="creation" value="2020/08/02 12:30" />
 		<property name="kindRound" value="SERIES-A" />
@@ -298,10 +231,10 @@
 		<property name="amount" value="€400" />
 		<property name="link" value="http://www.myenlace.com" />
 		<property name="active" value="true" />
-		<property name="entrepreneur" value="entrepreneur1" />
+		<property name="entrepreneur" ref="entrepreneur1" />
 	</bean>
 	
-		<bean name="investorRecord3" class="acme.entities.investmentRounds.InvestmentRound">
+		<bean name="investmentRound3" class="acme.entities.investmentRounds.InvestmentRound">
 		<property name="ticker" value="DP1-10-001100" />
 		<property name="creation" value="2020/06/22 08:10" />
 		<property name="kindRound" value="SEED" />
@@ -310,8 +243,79 @@
 		<property name="amount" value="€100" />
 		<property name="link" value="http://www.nba.com" />
 		<property name="active" value="false" />
-		<property name="entrepreneur" value="entrepreneur2" />
+		<property name="entrepreneur" ref="entrepreneur2" />
 	</bean>
+	
+	<bean name="activity1" class="acme.entities.activities.Activity">
+		<property name="title" value="act-12-001122" />
+		<property name="startDate" value="2020/09/01 08:30" />
+		<property name="endDate" value="2020/10/01 08:30" />
+		<property name="budget" value="€500" />
+		<property name="investmentRound" ref="investmentRound1" />
+	</bean>
+	
+	<bean name="activity2" class="acme.entities.activities.Activity">
+		<property name="title" value="act-12-331122" />
+		<property name="startDate" value="2020/09/05 08:30" />
+		<property name="endDate" value="2020/11/04 08:30" />
+		<property name="budget" value="€500" />
+		<property name="investmentRound" ref="investmentRound1" />
+	</bean>
+	
+	<bean name="activity3" class="acme.entities.activities.Activity">
+		<property name="title" value="act-12-334422" />
+		<property name="startDate" value="2020/09/05 08:30" />
+		<property name="endDate" value="2020/11/04 08:30" />
+		<property name="budget" value="€200" />
+		<property name="investmentRound" ref="investmentRound2" />
+	</bean>
+	
+	
+	<bean name="application1" class="acme.entities.applications.Application">
+		<property name="ticker" value="INV-11-221212" />
+		<property name="creation" value="2020/07/25 10:30" />
+		<property name="statement" value="Declaración escrita" />
+		<property name="offer" ref="money15" />
+		<property name="investmentRound" ref="investmentRound1" />
+		<property name="investor" ref="investor1" />
+	</bean>
+	
+	<bean name="application2" class="acme.entities.applications.Application">
+		<property name="ticker" value="INV-11-221216" />
+		<property name="creation" value="2020/07/21 10:30" />
+		<property name="statement" value="Declaración escrita" />
+		<property name="offer" ref="money16" />
+		<property name="investmentRound" ref="investmentRound2" />
+		<property name="investor" ref="investor1" />
+	</bean>
+	
+	<bean name="application3" class="acme.entities.applications.Application">
+		<property name="ticker" value="INV-11-721212" />
+		<property name="creation" value="2020/07/25 10:30" />
+		<property name="statement" value="Declaración escrita" />
+		<property name="offer" ref="money17" />
+		<property name="investmentRound" ref="investmentRound1" />
+		<property name="investor" ref="investor2" />
+	</bean>
+	
+	<bean name="application4" class="acme.entities.applications.Application">
+		<property name="ticker" value="INV-11-201212" />
+		<property name="creation" value="2020/07/24 10:30" />
+		<property name="statement" value="Declaración escrita" />
+		<property name="offer" ref="money18" />
+		<property name="investmentRound" ref="investmentRound2" />
+		<property name="investor" ref="investor2" />
+	</bean>
+	
+	<bean name="application5" class="acme.entities.applications.Application">
+		<property name="ticker" value="INV-11-226262" />
+		<property name="creation" value="2020/07/20 10:30" />
+		<property name="statement" value="Declaración escrita" />
+		<property name="offer" ref="money19" />
+		<property name="investmentRound" ref="investmentRound1" />
+		<property name="investor" ref="investor1" />
+	</bean>
+	
 	
 	<bean name="entrepreneurUserAccount1" class="acme.framework.entities.UserAccount">
 		<property name="username" value="entre123" />
@@ -484,6 +488,26 @@
 		<property name="currency" value="€" />
 	</bean>
 	<bean name="money14" class="acme.framework.datatypes.Money">
+		<property name="amount" value="500.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money15" class="acme.framework.datatypes.Money">
+		<property name="amount" value="100.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money16" class="acme.framework.datatypes.Money">
+		<property name="amount" value="200.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money17" class="acme.framework.datatypes.Money">
+		<property name="amount" value="300.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money18" class="acme.framework.datatypes.Money">
+		<property name="amount" value="400.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money19" class="acme.framework.datatypes.Money">
 		<property name="amount" value="500.00" />
 		<property name="currency" value="€" />
 	</bean>

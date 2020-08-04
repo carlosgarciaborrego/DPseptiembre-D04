@@ -2,6 +2,7 @@
 package acme.features.authenticated.entrepreneur.application;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import acme.entities.applications.Application;
 import acme.entities.roles.Entrepreneur;
@@ -9,6 +10,7 @@ import acme.framework.components.Model;
 import acme.framework.components.Request;
 import acme.framework.services.AbstractShowService;
 
+@Service
 public class EntrepreneurApplicationShowService implements AbstractShowService<Entrepreneur, Application> {
 
 	@Autowired
