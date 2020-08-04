@@ -61,6 +61,8 @@ master.menu.authenticated.listToolRec = Listar Herramientas Tecnológicas
 master.menu.authenticated.listInquiry = Listar Investigaciones
 master.menu.authenticated.listOverture = Listar Propuestas
 master.menu.authenticated.listChallenge = Listar Retos
+master.menu.authenticated.listInvestRound = Listar Rondas de Inversión
+
 
 # master.menu.provider ########################################################
 
@@ -71,6 +73,13 @@ master.menu.provider.favourite-link = Enlace favorito
 
 master.menu.consumer = Consumidor
 master.menu.consumer.favourite-link = Enlace favorito
+
+# master.menu.entrepreneur ##########################################################
+master.menu.entrepreneur.investRound = Listar Rondas de Inversión
+master.menu.entrepreneur.application = Listar Solicitudes
+
+# master.menu.investor ##########################################################
+master.menu.investor.application = Listar Solicitudes
 
 # master.menu.user-account ####################################################
 

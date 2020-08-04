@@ -60,6 +60,7 @@ master.menu.authenticated.listToolRec = ToolRecord List
 master.menu.authenticated.listInquiry = Inquiry List
 master.menu.authenticated.listOverture = Overture List
 master.menu.authenticated.listChallenge = Challenge List
+master.menu.authenticated.listInvestRound = Investment Round List
 
 # master.menu.provider ########################################################
 
@@ -70,6 +71,13 @@ master.menu.provider.favourite-link = Favourite link
 
 master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
+
+# master.menu.entrepreneur ##########################################################
+master.menu.entrepreneur.investRound = Investment Round List
+master.menu.entrepreneur.application = Application List
+
+# master.menu.investor ##########################################################
+master.menu.investor.application = Application List
 
 # master.menu.user-account ####################################################
 
