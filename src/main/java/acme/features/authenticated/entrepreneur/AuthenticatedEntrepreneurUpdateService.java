@@ -35,8 +35,6 @@ public class AuthenticatedEntrepreneurUpdateService implements AbstractUpdateSer
 	private AuthenticatedEntrepreneurRepository repository;
 
 
-	// AbstractUpdateService<Authenticated, Consumer> interface -----------------
-
 	@Override
 	public boolean authorise(final Request<Entrepreneur> request) {
 		assert request != null;

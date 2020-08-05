@@ -6,12 +6,12 @@
 			
 <tiles-definitions>
 
-	<definition name="authenticated/investment-round/list" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/investment-round/list.jsp" />
+	<definition name="entrepreneur/investment-round/list" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/entrepreneur/investment-round/list.jsp" />
 	</definition>
 	
-	<definition name="authenticated/investment-round/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/investment-round/form.jsp" />
+	<definition name="entrepreneur/investment-round/form" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/entrepreneur/investment-round/form.jsp" />
 	</definition>
 	
 </tiles-definitions>			

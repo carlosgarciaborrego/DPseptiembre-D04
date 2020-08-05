@@ -11,7 +11,6 @@
 	<acme:form-money code="authenticated.investmentRound.form.label.amount" path="amount"/>
 	<acme:form-url code="authenticated.investmentRound.form.label.link" path="link"/>
 	<acme:form-checkbox code="authenticated.investmentRound.form.label.active" path="active"/>
-	<acme:form-textbox code="authenticated.investmentRound.form.label.entrepreneur" path="entrepreneur"/>
 	<acme:form-return code="authenticated.investmentRound.form.button.return"/>
 </acme:form>
 

@@ -35,8 +35,6 @@ public class AuthenticatedEntrepreneurCreateService implements AbstractCreateSer
 	@Autowired
 	private AuthenticatedEntrepreneurRepository repository;
 
-	// AbstractCreateService<Authenticated, Consumer> ---------------------------
-
 
 	@Override
 	public boolean authorise(final Request<Entrepreneur> request) {

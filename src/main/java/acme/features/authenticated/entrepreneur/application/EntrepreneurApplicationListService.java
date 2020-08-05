@@ -34,6 +34,7 @@ public class EntrepreneurApplicationListService implements AbstractListService<E
 
 		Collection<Application> result;
 		int id = request.getPrincipal().getActiveRoleId();
+
 		result = this.repository.findApplicationToInvestmentRound(id);
 
 		return result;

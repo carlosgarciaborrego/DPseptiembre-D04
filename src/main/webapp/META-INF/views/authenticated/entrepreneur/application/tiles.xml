@@ -6,12 +6,12 @@
 			
 <tiles-definitions>
 
-	<definition name="authenticated/application/list" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/application/list.jsp" />
+	<definition name="entrepreneur/application/list" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/entrepreneur/application/list.jsp" />
 	</definition>
 	
-	<definition name="authenticated/application/form" extends="master">
-		<put-attribute name="body" type="template" value="../authenticated/application/form.jsp" />
+	<definition name="entrepreneur/application/form" extends="master">
+		<put-attribute name="body" type="template" value="../authenticated/entrepreneur/application/form.jsp" />
 	</definition>
 	
 </tiles-definitions>			

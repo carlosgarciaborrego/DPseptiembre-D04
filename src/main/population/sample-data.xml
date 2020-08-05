@@ -231,7 +231,7 @@
 		<property name="amount" value="€400" />
 		<property name="link" value="http://www.myenlace.com" />
 		<property name="active" value="true" />
-		<property name="entrepreneur" ref="entrepreneur1" />
+		<property name="entrepreneur" ref="entrepreneur2" />
 	</bean>
 	
 		<bean name="investmentRound3" class="acme.entities.investmentRounds.InvestmentRound">
@@ -270,7 +270,133 @@
 		<property name="investmentRound" ref="investmentRound2" />
 	</bean>
 	
+
 	
+	
+	<bean name="entrepreneurUserAccount1" class="acme.framework.entities.UserAccount">
+		<property name="username" value="entre123" />
+		<property name="password" value="entre123" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Carlos" />
+				<property name="surname" value="Garcia" />
+				<property name="email" value="garcia@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="entrepreneur1" />
+				<ref bean="entrepreneurAuthenticated1" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="entrepreneur1" class="acme.entities.roles.Entrepreneur">
+		<property name="startUpName" value="Loou" />
+		<property name="activitySector" value="Agricola" />
+		<property name="qualificationRecord" value="10" />
+		<property name="skillRecord" value="Distribución de alimentos ecológicos" />
+		<property name="userAccount" ref="entrepreneurUserAccount1" />
+	</bean>
+	
+	<bean name="entrepreneurAuthenticated1" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="entrepreneurUserAccount1" />
+	</bean>
+	
+	<bean name="entrepreneurUserAccount2" class="acme.framework.entities.UserAccount">
+		<property name="username" value="entre456" />
+		<property name="password" value="entre456" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Zac" />
+				<property name="surname" value="Ashe" />
+				<property name="email" value="zac@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="entrepreneur2" />
+				<ref bean="entrepreneurAuthenticated2" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="entrepreneur2" class="acme.entities.roles.Entrepreneur">
+		<property name="startUpName" value="NyN" />
+		<property name="activitySector" value="Industria" />
+		<property name="qualificationRecord" value="unsiete" />
+		<property name="skillRecord" value="Con 10 años de experiencia en el sector" />
+		<property name="userAccount" ref="entrepreneurUserAccount2" />
+	</bean>
+	
+	<bean name="entrepreneurAuthenticated2" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="entrepreneurUserAccount2" />
+	</bean>
+	
+	<bean name="investorUserAccount1" class="acme.framework.entities.UserAccount">
+		<property name="username" value="investor1" />
+		<property name="password" value="investor1" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="John" />
+				<property name="surname" value="Smith" />
+				<property name="email" value="smith@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="investor1" />
+				<ref bean="investorAuthenticated1" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="investor1" class="acme.entities.roles.Investor">
+		<property name="name" value="Lucas" />
+		<property name="activitySector" value="Agricola" />
+		<property name="profile" value="perfil de Lucas" />
+		<property name="userAccount" ref="investorUserAccount1" />
+	</bean>
+	
+	<bean name="investorAuthenticated1" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="investorUserAccount1" />
+	</bean>
+	
+		<bean name="investorUserAccount2" class="acme.framework.entities.UserAccount">
+		<property name="username" value="investor2" />
+		<property name="password" value="investor2" />
+		<property name="enabled" value="true" />
+		<property name="identity">
+			<bean class="acme.datatypes.UserIdentity">
+				<property name="name" value="Jack" />
+				<property name="surname" value="Sparrow" />
+				<property name="email" value="jack@acme.com" />
+			</bean>
+		</property>
+		<property name="roles">
+			<list>
+				<ref bean="investor2" />
+				<ref bean="investorAuthenticated2" />
+			</list>
+		</property>
+	</bean>
+	
+	<bean name="investor2" class="acme.entities.roles.Investor">
+		<property name="name" value="Jack" />
+		<property name="activitySector" value="Minero" />
+		<property name="profile" value="perfil de Jack" />
+		<property name="userAccount" ref="investorUserAccount2" />
+	</bean>
+	
+	<bean name="investorAuthenticated2" class="acme.framework.entities.Authenticated">
+		<property name="userAccount" ref="investorUserAccount2" />
+	</bean>
+	
+	
+		
 	<bean name="application1" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-221212" />
 		<property name="creation" value="2020/07/25 10:30" />
@@ -314,125 +440,6 @@
 		<property name="offer" ref="money19" />
 		<property name="investmentRound" ref="investmentRound1" />
 		<property name="investor" ref="investor1" />
-	</bean>
-	
-	
-	<bean name="entrepreneurUserAccount1" class="acme.framework.entities.UserAccount">
-		<property name="username" value="entre123" />
-		<property name="password" value="entre123" />
-		<property name="enabled" value="true" />
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Carlos" />
-				<property name="surname" value="Garcia" />
-				<property name="email" value="garcia@acme.com" />
-			</bean>
-		</property>
-		<property name="roles">
-			<list>
-				<ref bean="entrepreneur1" />
-				<ref bean="entrepreneurAuthenticated1" />
-			</list>
-		</property>
-	</bean>
-	
-	<bean name="entrepreneur1" class="acme.entities.roles.Entrepreneur">
-		<property name="startUpName" value="Loou" />
-		<property name="activitySector" value="Agricola" />
-		<property name="qualificationRecord" value="10" />
-		<property name="skillRecord" value="Distribución de alimentos ecológicos" />
-	</bean>
-	
-	<bean name="entrepreneurAuthenticated1" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="entrepreneurUserAccount1" />
-	</bean>
-	
-	<bean name="entrepreneurUserAccount2" class="acme.framework.entities.UserAccount">
-		<property name="username" value="entre123" />
-		<property name="password" value="entre123" />
-		<property name="enabled" value="true" />
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Zac" />
-				<property name="surname" value="Ashe" />
-				<property name="email" value="zac@acme.com" />
-			</bean>
-		</property>
-		<property name="roles">
-			<list>
-				<ref bean="entrepreneur2" />
-				<ref bean="entrepreneurAuthenticated2" />
-			</list>
-		</property>
-	</bean>
-	
-	<bean name="entrepreneur2" class="acme.entities.roles.Entrepreneur">
-		<property name="startUpName" value="NyN" />
-		<property name="activitySector" value="Industria" />
-		<property name="qualificationRecord" value="7" />
-		<property name="skillRecord" value="Con 10 años de experiencia en el sector" />
-	</bean>
-	
-	<bean name="entrepreneurAuthenticated2" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="entrepreneurUserAccount2" />
-	</bean>
-	
-	<bean name="investorUserAccount1" class="acme.framework.entities.UserAccount">
-		<property name="username" value="investor1" />
-		<property name="password" value="investor1" />
-		<property name="enabled" value="true" />
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="John" />
-				<property name="surname" value="Smith" />
-				<property name="email" value="smith@acme.com" />
-			</bean>
-		</property>
-		<property name="roles">
-			<list>
-				<ref bean="investor1" />
-				<ref bean="investorAuthenticated1" />
-			</list>
-		</property>
-	</bean>
-	
-	<bean name="investor1" class="acme.entities.roles.Investor">
-		<property name="name" value="Lucas" />
-		<property name="activitySector" value="Agricola" />
-		<property name="profile" value="perfil de Lucas" />
-	</bean>
-	
-	<bean name="investorAuthenticated1" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="investorUserAccount1" />
-	</bean>
-	
-		<bean name="investorUserAccount2" class="acme.framework.entities.UserAccount">
-		<property name="username" value="investor2" />
-		<property name="password" value="investor2" />
-		<property name="enabled" value="true" />
-		<property name="identity">
-			<bean class="acme.datatypes.UserIdentity">
-				<property name="name" value="Jack" />
-				<property name="surname" value="Sparrow" />
-				<property name="email" value="jack@acme.com" />
-			</bean>
-		</property>
-		<property name="roles">
-			<list>
-				<ref bean="investor2" />
-				<ref bean="investorAuthenticated2" />
-			</list>
-		</property>
-	</bean>
-	
-	<bean name="investor2" class="acme.entities.roles.Investor">
-		<property name="name" value="Jack" />
-		<property name="activitySector" value="Minero" />
-		<property name="profile" value="perfil de Jack" />
-	</bean>
-	
-	<bean name="investorAuthenticated2" class="acme.framework.entities.Authenticated">
-		<property name="userAccount" ref="investorUserAccount2" />
 	</bean>
 	
 	<bean name="money1" class="acme.framework.datatypes.Money">

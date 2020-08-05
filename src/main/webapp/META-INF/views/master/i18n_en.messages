@@ -73,10 +73,12 @@ master.menu.consumer = Consumer
 master.menu.consumer.favourite-link = Favourite link
 
 # master.menu.entrepreneur ##########################################################
+master.menu.entrepreneur = Entrepreneur
 master.menu.entrepreneur.investRound = Investment Round List
 master.menu.entrepreneur.application = Application List
 
 # master.menu.investor ##########################################################
+master.menu.investor = Investor
 master.menu.investor.application = Application List
 
 # master.menu.user-account ####################################################
