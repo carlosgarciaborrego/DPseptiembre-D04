@@ -10,6 +10,9 @@ administrator.inquiry.form.button.create = Crear
 administrator.inquiry.form.button.update = Actualizar
 administrator.inquiry.form.button.delete = Eliminar
 
+administrator.inquiry.deadline = La fecha límite debe ser en futuro
+administrator.inquiry.maxPrice = El precio max debe ser igual o superior a precio min
+
 administrator.inquiry.list.label.title = Título
 administrator.inquiry.list.label.creation = Creación
 administrator.inquiry.list.label.deadline = Fecha límite
