@@ -33,6 +33,9 @@ public class Application extends DomainEntity {
 	@NotBlank
 	private String				ticker;
 
+	@NotBlank
+	private String				tickerOfInvest;
+
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date				creation;
 

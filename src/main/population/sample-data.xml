@@ -399,6 +399,7 @@
 		
 	<bean name="application1" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-221212" />
+		<property name="tickerOfInvest" value="ASR-10-001100" />
 		<property name="creation" value="2020/07/25 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money15" />
@@ -408,6 +409,7 @@
 	
 	<bean name="application2" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-221216" />
+		<property name="tickerOfInvest" value="MMM-10-001100" />
 		<property name="creation" value="2020/07/21 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money16" />
@@ -417,6 +419,7 @@
 	
 	<bean name="application3" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-721212" />
+		<property name="tickerOfInvest" value="ASR-10-001100" />
 		<property name="creation" value="2020/07/25 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money17" />
@@ -426,6 +429,7 @@
 	
 	<bean name="application4" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-201212" />
+		<property name="tickerOfInvest" value="MMM-10-001100" />
 		<property name="creation" value="2020/07/24 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money18" />
@@ -435,6 +439,7 @@
 	
 	<bean name="application5" class="acme.entities.applications.Application">
 		<property name="ticker" value="INV-11-226262" />
+		<property name="tickerOfInvest" value="ASR-10-001100" />
 		<property name="creation" value="2020/07/20 10:30" />
 		<property name="statement" value="Declaración escrita" />
 		<property name="offer" ref="money19" />
