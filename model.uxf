@@ -443,7 +443,7 @@ has v</panel_attributes>
     </coordinates>
     <panel_attributes>InvestmentRound
 --
-+ ticker: String {unique, NotBlank}
++ ticker: String {NotBlank}
 + creation: Date {TemporalType.TIMESTAMP}
 + kindRound: String {NotBlank}
 + title: String {NotBlank}

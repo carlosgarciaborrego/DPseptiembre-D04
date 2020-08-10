@@ -216,7 +216,7 @@
 		<property name="kindRound" value="ANGEL" />
 		<property name="title" value="Titulo de prueba" />
 		<property name="description" value="Descripcion de la prueba" />
-		<property name="amount" value="€300" />
+		<property name="amount" ref="money20" />
 		<property name="link" value="http://www.enlace.com" />
 		<property name="active" value="true" />
 		<property name="entrepreneur" ref="entrepreneur1" />
@@ -228,7 +228,7 @@
 		<property name="kindRound" value="SERIES-A" />
 		<property name="title" value="Titulo de inversion" />
 		<property name="description" value="Descripcion de la inversion" />
-		<property name="amount" value="€400" />
+		<property name="amount" ref="money21" />
 		<property name="link" value="http://www.myenlace.com" />
 		<property name="active" value="true" />
 		<property name="entrepreneur" ref="entrepreneur2" />
@@ -240,7 +240,7 @@
 		<property name="kindRound" value="SEED" />
 		<property name="title" value="titulo de investor3" />
 		<property name="description" value="Descripcion de investor3" />
-		<property name="amount" value="€100" />
+		<property name="amount" ref="money22" />
 		<property name="link" value="http://www.nba.com" />
 		<property name="active" value="false" />
 		<property name="entrepreneur" ref="entrepreneur2" />
@@ -250,7 +250,7 @@
 		<property name="title" value="act-12-001122" />
 		<property name="startDate" value="2020/09/01 08:30" />
 		<property name="endDate" value="2020/10/01 08:30" />
-		<property name="budget" value="€500" />
+		<property name="budget" value="€200" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	
@@ -258,7 +258,7 @@
 		<property name="title" value="act-12-331122" />
 		<property name="startDate" value="2020/09/05 08:30" />
 		<property name="endDate" value="2020/11/04 08:30" />
-		<property name="budget" value="€500" />
+		<property name="budget" value="€300" />
 		<property name="investmentRound" ref="investmentRound1" />
 	</bean>
 	
@@ -266,7 +266,7 @@
 		<property name="title" value="act-12-334422" />
 		<property name="startDate" value="2020/09/05 08:30" />
 		<property name="endDate" value="2020/11/04 08:30" />
-		<property name="budget" value="€200" />
+		<property name="budget" value="€400" />
 		<property name="investmentRound" ref="investmentRound2" />
 	</bean>
 	
@@ -516,6 +516,18 @@
 	</bean>
 	<bean name="money19" class="acme.framework.datatypes.Money">
 		<property name="amount" value="500.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money20" class="acme.framework.datatypes.Money">
+		<property name="amount" value="500.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money21" class="acme.framework.datatypes.Money">
+		<property name="amount" value="300.00" />
+		<property name="currency" value="€" />
+	</bean>
+	<bean name="money22" class="acme.framework.datatypes.Money">
+		<property name="amount" value="100.00" />
 		<property name="currency" value="€" />
 	</bean>
 </beans>

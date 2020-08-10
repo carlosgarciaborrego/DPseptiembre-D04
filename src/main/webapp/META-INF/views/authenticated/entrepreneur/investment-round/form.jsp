@@ -12,5 +12,8 @@
 	<acme:form-url code="authenticated.investmentRound.form.label.link" path="link"/>
 	<acme:form-checkbox code="authenticated.investmentRound.form.label.active" path="active"/>
 	<acme:form-return code="authenticated.investmentRound.form.button.return"/>
+	
+			<acme:form-submit code="authenticated.investmentRoundform.label.activity" action="/authenticated/activity/list?id=${id}" method="get"/>
+	
 </acme:form>
 
